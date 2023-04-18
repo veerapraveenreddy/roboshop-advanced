@@ -55,7 +55,9 @@ spec:
       containers:
       - name: mysql
         image: avpreddy/mysql:k8
-        command: ["/entrypoint.sh", "--initialize"]
+        imagePullPolicy: Always
+        arg:
+        - "--ignore-db-dir=lost+found"
         envFrom:
         - configMapRef:
             name: mysql-config
