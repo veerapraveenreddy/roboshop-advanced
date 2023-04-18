@@ -56,7 +56,7 @@ spec:
       - name: mysql
         image: avpreddy/mysql:k8
         imagePullPolicy: Always
-        arg:
+        args:
         - "--ignore-db-dir=lost+found"
         envFrom:
         - configMapRef:
@@ -69,7 +69,7 @@ spec:
         volumeMounts:
         - name: mysql-volume
           mountPath: /var/lib/mysql
-       
+        
   volumeClaimTemplates:
   - metadata:
       name: mysql-volume
