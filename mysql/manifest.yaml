@@ -54,7 +54,7 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: avpreddy/mysql:k8
+        image: techworldwithsiva/mysql:k8
         imagePullPolicy: Always
         args:
         - "--ignore-db-dir=lost+found"
